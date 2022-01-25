@@ -18,7 +18,7 @@ router.route('/manufacturers').get(async (req, res) => {
 // });
 
 router.route('/manufacturers/:id').get((req, res, next) => {
-    ManufacturersSchema.findById(req.params._id, (error, data) => {
+    ManufacturersSchema.findById(req.params.id, (error, data) => {
         if (error) {
             return next(error);
         } else {
