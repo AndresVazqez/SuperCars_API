@@ -23,8 +23,7 @@ router.route('/manufacturers/:id').get((req, res, next) => {
             return next(error);
         } else {
             res.status(200).json({
-                message: 'Manufacturers Detail',
-                result: data
+                
             })
         }
     });
