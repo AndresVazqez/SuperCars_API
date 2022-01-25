@@ -22,7 +22,7 @@ router.route('/manufacturers/:id').get((req, res, next) => {
         if (error) {
             return next(error);
         } else {
-            res.status(200).json({res})
+            res.status(200).json(data)
         }
     });
 });
