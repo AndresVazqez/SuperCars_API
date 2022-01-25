@@ -6,6 +6,7 @@ const { connect } = require('./src/utils/database/db');
 
 const manufacturers = require('./src/api/routes/manufacturers.routes');
 const superCars = require('./src/api/routes/supercars.routes');
+const documentation = require('./src/utils/documentation/documentation.json')
 
 connect();
 
