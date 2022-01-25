@@ -8,7 +8,7 @@ router.route('/supercars').get((req, res) => {
         if (err) {
             return next(err);
         } else {
-            res.status(200).json({supercars: response});
+            res.status(200).json(response);
         }
     })
 });
