@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Definimos el schema de nuestro movie
-let ManufacturersSchema = new Schema({
+const ManufacturersSchema = new Schema({
     id: {
         type: 'number'
     },
@@ -21,7 +21,7 @@ let ManufacturersSchema = new Schema({
         type: 'string'
     },
     logo: {
-        logo: 'string'
+        type: 'string'
     }
 },
     {
