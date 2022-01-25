@@ -5,11 +5,7 @@ const ManufacturersSchema = require('../models/manufacturers.model');
 
 router.route('/manufacturers').get(async (req, res) => {
     const manufacturers = await ManufacturersSchema.find();
-    res.status(200).json({
-        status: 200,
-        message: HTTPSTATUSCODE[200],
-        data: { manufacturers: manufacturers },
-      });
+    res.status(200).json({data});
 });
 
 //----------REPETIDO---------//
