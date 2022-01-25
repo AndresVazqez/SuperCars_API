@@ -20,6 +20,10 @@ app.use('/public', express.static('public'));
 
 app.use('/api', manufacturers);
 app.use('/api', superCars);
+app.use('/', (req, res, next) => {
+    return res.json(documentation)
+})
+
 
 const PORT = process.env.PORT || 8000;
 
@@ -27,11 +31,12 @@ const server = app.listen(PORT, () => {
     console.log(`listening on port 🏴󠁥󠁧󠁰󠁴󠁳󠁿: ${PORT}`)
 });
 
-app.use((req, res, next) => {
-    setImmediate(() => {
-        next(new Error('Something went wrong'));
-    });
-});
+
+// app.use((req, res, next) => {
+//     setImmediate(() => {
+//         next(new Error('Something went wrong'));
+//     });
+// });
 
 app.use(function (err, req, res, next) {
     console.error(err.message);

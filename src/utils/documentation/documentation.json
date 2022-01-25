@@ -1,0 +1,12 @@
+{
+    "Manufacturers" : [
+        {
+            "endPoint": "/api/manufacturers"
+        }
+    ],
+    "SuperCars": [
+        {
+            "endPoint": "/api/supercars"
+        }
+    ]
+}
