@@ -27,9 +27,12 @@ router.route('/supercars/:id').get((req, res, next) => {
 
 router.post('/supercars', (req, res, next) => {
     const supercars = new SuperCarsSchema({
-        name: req.body.name,
-        birth: req.body.birth,
-        nationality: req.body.nationality,
+        id: req.body.id,
+        model: req.body.model,
+        year: req.body.year,
+        engine: req.body.engine,
+        hp: req.body.hp,
+        img: req.body.img,
     });
     supercars.save().then((response) => {
         res.status(201).json({

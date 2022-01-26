@@ -8,14 +8,6 @@ router.route('/manufacturers').get(async (req, res) => {
     res.status(200).json(manufacturers);
 });
 
-//----------REPETIDO---------//
-// router.route(' manufacturers').get(async (req, res) => {
-//     const manufacturers = await ManufacturersSchema.find().populate('players');
-//     res.status(200).json({
-//         message: 'Teams',
-//         result: manufacturers
-//     })
-// });
 
 router.route('/manufacturers/:id').get((req, res, next) => {
     ManufacturersSchema.findById(req.params.id, (error, data) => {
