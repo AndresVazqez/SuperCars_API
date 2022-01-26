@@ -13,6 +13,18 @@ router.route('/supercars').get((req, res) => {
     })
 });
 
+
+router.route('/supercars/:id').get((req, res, next) => {
+    SuperCarsSchema.findById(req.params.id, (error, data) => {
+        if (error) {
+            return next(error);
+        } else {
+            res.status(200).json(data)
+        }
+    });
+});
+
+
 router.post('/supercars', (req, res, next) => {
     const supercars = new SuperCarsSchema({
         name: req.body.name,
